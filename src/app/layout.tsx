@@ -1,3 +1,5 @@
+import StyledJsxRegistry from "@/registry";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +14,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-BR">
-            <body>{children}</body>
+            <body>
+                <StyledJsxRegistry>{children}</StyledJsxRegistry>
+            </body>
         </html>
     );
 }
