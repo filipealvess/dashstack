@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 import StyledJsxRegistry from "@/registry";
 
 import type { Metadata } from "next";
