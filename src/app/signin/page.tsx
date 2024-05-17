@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import * as Styles from "@/app/signin/styles";
 import Button from "@/components/form/Button";
@@ -7,6 +8,7 @@ import Checkbox from "@/components/form/Checkbox";
 import Input from "@/components/form/Input";
 import { Spacer } from "@/components/styled/Spacer";
 import Auth from "@/components/wrappers/Auth";
+import { Routes } from "@/constants/routes";
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -65,6 +67,14 @@ function Login() {
                     styles={Styles.button}
                     text="Sign in"
                 />
+
+                <Spacer height={16} />
+
+                <Auth.Navigation>
+                    <p>Don&#39;t have an account?</p>
+
+                    <Link href={Routes.signup}>Create Account</Link>
+                </Auth.Navigation>
             </form>
         </Auth>
     );
