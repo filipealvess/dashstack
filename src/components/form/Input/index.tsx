@@ -8,7 +8,7 @@ function Input({
     label,
     placeholder,
     required,
-    type,
+    type = "text",
     value,
 }: IProps) {
     const id = useId();

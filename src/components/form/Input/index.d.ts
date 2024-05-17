@@ -3,6 +3,6 @@ export interface IProps {
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
     placeholder: string;
     required?: boolean;
-    type: React.HTMLInputTypeAttribute;
+    type?: React.HTMLInputTypeAttribute;
     value: string | number;
 }
