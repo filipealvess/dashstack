@@ -5,7 +5,7 @@ import * as Styles from "@/components/form/Checkbox/styles";
 
 import type { IProps } from "@/components/form/Checkbox/index.d";
 
-function Checkbox({ label, checked, onChange }: IProps) {
+function Checkbox({ label, checked, onChange, required }: IProps) {
     const id = useId();
 
     return (
@@ -14,6 +14,7 @@ function Checkbox({ label, checked, onChange }: IProps) {
                 checked={checked}
                 id={id}
                 onChange={onChange}
+                required={required}
                 type="checkbox"
             />
 
