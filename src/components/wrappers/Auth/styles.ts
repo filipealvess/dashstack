@@ -5,6 +5,13 @@ export const Container = styled.main`
     padding: 40px 24px;
     background-color: #4880ff;
     overflow-x: hidden;
+    transition-property: padding, background-color;
+    transition-duration: 0.3s;
+
+    @media (max-width: 380px) {
+        padding: 0;
+        background-color: #ffffff;
+    }
 `;
 
 export const Content = styled.section`
@@ -13,6 +20,17 @@ export const Content = styled.section`
     padding: 64px 56px;
     border-radius: 24px;
     background-color: #ffffff;
+    transition-property: padding, border-radius;
+    transition-duration: 0.3s;
+
+    @media (max-width: 500px) {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+
+    @media (max-width: 380px) {
+        padding: 32px 24px;
+    }
 `;
 
 export const Title = styled.h1`
@@ -43,5 +61,9 @@ export const Navigation = styled.section`
         color: #5a8cff;
         font-weight: 600;
         text-decoration: underline;
+    }
+
+    @media (max-width: 380px) {
+        flex-direction: column;
     }
 `;
