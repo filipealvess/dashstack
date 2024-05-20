@@ -8,4 +8,10 @@ export const Spacer = styled.div<IProps>`
         css`
             height: ${height}px;
         `}
+
+    ${({ expand }) =>
+        expand === true &&
+        css`
+            flex: 1;
+        `}
 `;
