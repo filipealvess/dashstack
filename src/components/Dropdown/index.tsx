@@ -1,8 +1,16 @@
+import { Check } from "react-feather";
 import * as Styles from "@/components/Dropdown/styles";
 
 import type { IProps } from "@/components/Dropdown/index.d";
 
-function Dropdown({ footer, items, title, visible }: IProps) {
+function Dropdown({
+    footer,
+    items,
+    onClick = () => null,
+    selected,
+    title,
+    visible,
+}: IProps) {
     if (visible === false) {
         return null;
     }
@@ -17,13 +25,20 @@ function Dropdown({ footer, items, title, visible }: IProps) {
 
             <Styles.List>
                 {items.map((item) => (
-                    <Styles.Item key={item.id}>
-                        <p>{item.title}</p>
+                    <Styles.ItemWrapper
+                        key={item.id}
+                        onClick={() => onClick(item.id)}
+                    >
+                        <Styles.Item>
+                            <p>{item.title}</p>
 
-                        {item.description !== undefined && (
-                            <span>{item.description}</span>
-                        )}
-                    </Styles.Item>
+                            {item.description !== undefined && (
+                                <span>{item.description}</span>
+                            )}
+                        </Styles.Item>
+
+                        {item.id === selected && <Check size={18} />}
+                    </Styles.ItemWrapper>
                 ))}
             </Styles.List>
 

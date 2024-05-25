@@ -27,10 +27,16 @@ export const List = styled.ul`
     }
 `;
 
-export const Item = styled.li`
+export const ItemWrapper = styled.li`
+    display: flex;
+    align-items: center;
     padding: 8px 20px;
     transition: opacity, 0.3s;
     cursor: pointer;
+`;
+
+export const Item = styled.div`
+    flex: 1;
 
     p {
         color: #202224;
