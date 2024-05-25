@@ -3,14 +3,14 @@ import styled, { css } from "styled-components";
 import type { IProps } from "@/components/styled/Spacer/index.d";
 
 export const Spacer = styled.div<IProps>`
-    ${({ height }) =>
-        height !== undefined &&
+    ${({ $height }) =>
+        $height !== undefined &&
         css`
-            height: ${height}px;
+            height: ${$height}px;
         `}
 
-    ${({ expand }) =>
-        expand === true &&
+    ${({ $expand }) =>
+        $expand === true &&
         css`
             flex: 1;
         `}

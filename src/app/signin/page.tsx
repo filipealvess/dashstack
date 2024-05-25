@@ -39,7 +39,7 @@ function Login() {
                     value={email}
                 />
 
-                <Spacer height={32} />
+                <Spacer $height={32} />
 
                 <Input
                     onChange={({ target: { value } }) => setPassword(value)}
@@ -50,7 +50,7 @@ function Login() {
                     value={password}
                 />
 
-                <Spacer height={16} />
+                <Spacer $height={16} />
 
                 <Checkbox
                     checked={rememberPassword}
@@ -60,7 +60,7 @@ function Login() {
                     }
                 />
 
-                <Spacer height={40} />
+                <Spacer $height={40} />
 
                 <Button
                     disabled={disabled}
@@ -68,7 +68,7 @@ function Login() {
                     text="Sign in"
                 />
 
-                <Spacer height={16} />
+                <Spacer $height={16} />
 
                 <Auth.Navigation>
                     <p>Don&#39;t have an account?</p>

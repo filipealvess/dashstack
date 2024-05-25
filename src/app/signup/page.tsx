@@ -42,7 +42,7 @@ function Signup() {
                     value={email}
                 />
 
-                <Spacer height={32} />
+                <Spacer $height={32} />
 
                 <Input
                     onChange={({ target: { value } }) => setName(value)}
@@ -52,7 +52,7 @@ function Signup() {
                     value={name}
                 />
 
-                <Spacer height={32} />
+                <Spacer $height={32} />
 
                 <Input
                     onChange={({ target: { value } }) => setPassword(value)}
@@ -63,7 +63,7 @@ function Signup() {
                     value={password}
                 />
 
-                <Spacer height={16} />
+                <Spacer $height={16} />
 
                 <Checkbox
                     checked={acceptTerms}
@@ -72,7 +72,7 @@ function Signup() {
                     required
                 />
 
-                <Spacer height={40} />
+                <Spacer $height={40} />
 
                 <Button
                     disabled={disabled}
@@ -80,7 +80,7 @@ function Signup() {
                     text="Sign up"
                 />
 
-                <Spacer height={16} />
+                <Spacer $height={16} />
 
                 <Auth.Navigation>
                     <p>Already have an account?</p>

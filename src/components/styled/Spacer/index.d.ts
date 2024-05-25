@@ -1,4 +1,4 @@
 export interface IProps {
-    expand?: boolean;
-    height?: number;
+    $expand?: boolean;
+    $height?: number;
 }
