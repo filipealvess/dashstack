@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import * as Styles from "@/app/signup/styles";
 import Button from "@/components/form/Button";
@@ -16,6 +17,8 @@ function Signup() {
     const [password, setPassword] = useState("");
     const [acceptTerms, setAcceptTerms] = useState(false);
 
+    const router = useRouter();
+
     const disabled =
         email.trim().length === 0 ||
         password.trim().length === 0 ||
@@ -24,6 +27,8 @@ function Signup() {
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
+
+        router.push(Routes.dashboard);
     }
 
     return (

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import * as Styles from "@/app/signin/styles";
 import Button from "@/components/form/Button";
@@ -15,10 +16,14 @@ function Login() {
     const [password, setPassword] = useState("");
     const [rememberPassword, setRememberPassword] = useState(true);
 
+    const router = useRouter();
+
     const disabled = email.trim().length === 0 || password.trim().length === 0;
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
+
+        router.push(Routes.dashboard);
     }
 
     return (
