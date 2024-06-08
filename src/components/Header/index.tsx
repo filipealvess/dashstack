@@ -6,10 +6,12 @@ import Notifications from "@/components/Menu/Notifications";
 import User from "@/components/Menu/User";
 import { Spacer } from "@/components/styled/Spacer";
 
-function Header() {
+import type { IProps } from "@/components/Header/index.d";
+
+function Header({ toggleSidebar }: IProps) {
     return (
         <Styles.Container>
-            <Styles.MenuButton>
+            <Styles.MenuButton onClick={toggleSidebar}>
                 <Menu size={18} />
             </Styles.MenuButton>
 
