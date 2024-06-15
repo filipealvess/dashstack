@@ -8,6 +8,7 @@ export const Container = styled.article`
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 9px 40px 0 rgba(0, 0, 0, 0.06);
+    z-index: 7;
 `;
 
 export const Header = styled.header`

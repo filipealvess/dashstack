@@ -3,6 +3,7 @@ import { Container as SearchInput } from "@/components/form/Input/Search/styles"
 
 export const Container = styled.header`
     display: flex;
+    position: relative;
     flex-direction: column;
     padding: 16px 24px;
     background-color: #ffffff;
