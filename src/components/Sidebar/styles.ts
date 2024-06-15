@@ -1,9 +1,13 @@
 import styled, { css } from "styled-components";
 
-import type { IContainerProps } from "@/components/Sidebar/styles.d";
+import type {
+    IContainerProps,
+    IOverlayProps,
+} from "@/components/Sidebar/styles.d";
 
 export const Container = styled.aside<IContainerProps>`
     width: 250px;
+    max-width: 80%;
     background-color: #ffffff;
     overflow-x: hidden;
     transition: width, 0.3s;
@@ -13,6 +17,33 @@ export const Container = styled.aside<IContainerProps>`
         css`
             width: 0;
         `}
+
+    @media (max-width: 800px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 10;
+    }
+`;
+
+export const Overlay = styled.div<IOverlayProps>`
+    background-color: transparent;
+    transition: 0.3s background-color;
+
+    @media (max-width: 800px) {
+        ${({ $visible }) =>
+            $visible === true &&
+            css`
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.25);
+                z-index: 9;
+            `}
+    }
 `;
 
 export const Logo = styled.header`

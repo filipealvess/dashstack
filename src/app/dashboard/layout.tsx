@@ -16,7 +16,10 @@ function Layout({ children }: IProps) {
 
     return (
         <Styles.Container>
-            <Sidebar visible={sidebarVisible} />
+            <Sidebar
+                onClose={() => setSidebarVisible(false)}
+                visible={sidebarVisible}
+            />
 
             <Styles.Content>
                 <Header toggleSidebar={toggleSidebar} />
