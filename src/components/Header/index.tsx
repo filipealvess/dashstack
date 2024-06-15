@@ -1,29 +1,47 @@
-import { Menu } from "react-feather";
+import { useState } from "react";
+import { Menu, Search } from "react-feather";
 import SearchInput from "@/components/form/Input/Search";
 import * as Styles from "@/components/Header/styles";
 import Languages from "@/components/Menu/Languages";
 import Notifications from "@/components/Menu/Notifications";
 import User from "@/components/Menu/User";
-import { Spacer } from "@/components/styled/Spacer";
 
 import type { IProps } from "@/components/Header/index.d";
 
 function Header({ toggleSidebar }: IProps) {
+    const [searchVisible, setSearchVisible] = useState(false);
+
+    function toggleSearch() {
+        setSearchVisible((prevState) => !prevState);
+    }
+
     return (
         <Styles.Container>
-            <Styles.MenuButton onClick={toggleSidebar}>
-                <Menu size={18} />
-            </Styles.MenuButton>
+            <Styles.Main>
+                <Styles.Content>
+                    <Styles.MenuButton onClick={toggleSidebar}>
+                        <Menu size={18} />
+                    </Styles.MenuButton>
 
-            <SearchInput />
+                    <SearchInput />
+                </Styles.Content>
 
-            <Spacer $expand />
+                <Styles.SearchButton onClick={toggleSearch}>
+                    <Search size={18} />
+                </Styles.SearchButton>
 
-            <Notifications />
+                <Notifications />
 
-            <Languages />
+                <Languages />
 
-            <User />
+                <User />
+            </Styles.Main>
+
+            {searchVisible === true && (
+                <Styles.Footer>
+                    <SearchInput />
+                </Styles.Footer>
+            )}
         </Styles.Container>
     );
 }
