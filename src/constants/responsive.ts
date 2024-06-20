@@ -1,3 +1,3 @@
-const TABLET_WIDTH = 800;
+const TABLET_WIDTH = 1000;
 
 export { TABLET_WIDTH };
