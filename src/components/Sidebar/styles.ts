@@ -8,6 +8,7 @@ import type {
 export const Container = styled.aside<IContainerProps>`
     width: 250px;
     max-width: 80%;
+    border-right: 0.5px solid #e0e0e0;
     background-color: #ffffff;
     overflow-x: hidden;
     transition: width, 0.3s;
