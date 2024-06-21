@@ -26,4 +26,13 @@ export const Container = styled.button<IProps>`
             background-color: transparent;
             color: #4880ff;
         `}
+
+    ${({ $danger, $type }) =>
+        $danger === true &&
+        $type === "secondary" &&
+        css`
+            border: 2px solid #c32648;
+            background-color: transparent;
+            color: #c32648;
+        `}
 `;

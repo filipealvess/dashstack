@@ -1,4 +1,5 @@
 export interface IProps {
+    danger?: boolean;
     disabled?: boolean;
     onClick?: () => void;
     styles?: React.CSSProperties;
