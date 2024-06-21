@@ -14,7 +14,9 @@ export const Content = styled.div<IContentProps>`
     display: flex;
     flex-direction: column;
     flex: 1;
+    max-width: 100%;
     overflow: hidden;
+    transition: 0.3s max-width;
 
     @media (min-width: 1000px) {
         ${({ $sidebarVisible }) =>
