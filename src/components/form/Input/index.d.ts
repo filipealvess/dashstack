@@ -1,8 +1,8 @@
 export interface IProps {
-    label: string;
+    label?: string;
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
-    placeholder: string;
+    placeholder?: string;
     required?: boolean;
     type?: React.HTMLInputTypeAttribute;
-    value: string | number;
+    value?: string | number;
 }
