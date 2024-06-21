@@ -3,6 +3,7 @@
 import { BarChart2, Clock, Package, Users } from "react-feather";
 import * as Styles from "@/app/dashboard/(dashboard)/styles";
 import SummaryCard from "@/components/cards/Summary";
+import SalesChart from "@/components/charts/Sales";
 
 function Index() {
     return (
@@ -48,6 +49,8 @@ function Index() {
                     value="2040"
                 />
             </Styles.Summary>
+
+            <SalesChart />
         </Styles.Container>
     );
 }

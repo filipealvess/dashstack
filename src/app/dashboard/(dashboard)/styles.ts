@@ -21,6 +21,7 @@ export const Header = styled.header`
 export const Summary = styled.section`
     display: flex;
     gap: 16px;
+    margin-bottom: 24px;
 
     ${SummaryCard} {
         flex: 1;
