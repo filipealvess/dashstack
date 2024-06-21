@@ -3,6 +3,7 @@ import { PieChart, Users } from "react-feather";
 import Link from "@/components/Sidebar/Link";
 import { TABLET_WIDTH } from "@/constants/responsive";
 import * as Styles from "@/components/Sidebar/styles";
+import { Routes } from "@/constants/routes";
 
 import type { IProps } from "@/components/Sidebar/index.d";
 
@@ -32,12 +33,16 @@ function Sidebar({ onClose, visible }: IProps) {
                 </Styles.Logo>
 
                 <Styles.Links>
-                    <Link onClick={handleClose} route="/dashboard">
+                    <Link onClick={handleClose} route={Routes.dashboard}>
                         <PieChart size={16} />
                         <Link.Text>Dashboard</Link.Text>
                     </Link>
 
-                    <Link onClick={handleClose} route="/dashboard/team">
+                    <Link
+                        onClick={handleClose}
+                        paths={[Routes.addMember, Routes.team]}
+                        route={Routes.team}
+                    >
                         <Users size={16} />
                         <Link.Text>Team</Link.Text>
                     </Link>
