@@ -3,4 +3,7 @@ export interface IProps {
     onClick?: () => void;
     styles?: React.CSSProperties;
     text: string;
+    type?: Types;
 }
+
+export type Types = "primary" | "secondary";
