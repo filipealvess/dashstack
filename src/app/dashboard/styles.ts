@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import type { IContentProps } from "@/app/dashboard/styles.d";
 
 export const Container = styled.div`
     display: flex;
@@ -8,8 +10,17 @@ export const Container = styled.div`
     overflow: hidden;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<IContentProps>`
     display: flex;
     flex-direction: column;
     flex: 1;
+    overflow: hidden;
+
+    @media (min-width: 1000px) {
+        ${({ $sidebarVisible }) =>
+            $sidebarVisible === true &&
+            css`
+                max-width: calc(100% - 250px);
+            `}
+    }
 `;

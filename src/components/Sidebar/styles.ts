@@ -6,6 +6,7 @@ import type {
 } from "@/components/Sidebar/styles.d";
 
 export const Container = styled.aside<IContainerProps>`
+    min-width: 250px;
     width: 250px;
     max-width: 80%;
     border-right: 0.5px solid #e0e0e0;
@@ -17,9 +18,10 @@ export const Container = styled.aside<IContainerProps>`
         $visible === false &&
         css`
             width: 0;
+            min-width: 0;
         `}
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
         position: absolute;
         top: 0;
         left: 0;
@@ -32,7 +34,7 @@ export const Overlay = styled.div<IOverlayProps>`
     background-color: transparent;
     transition: 0.3s background-color;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
         ${({ $visible }) =>
             $visible === true &&
             css`

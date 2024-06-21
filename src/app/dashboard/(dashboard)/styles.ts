@@ -7,6 +7,7 @@ import {
 export const Container = styled.main`
     padding: 24px;
     overflow-y: auto;
+    overflow-x: hidden;
 `;
 
 export const Header = styled.header`

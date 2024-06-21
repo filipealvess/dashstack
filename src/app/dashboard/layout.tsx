@@ -21,7 +21,7 @@ function Layout({ children }: IProps) {
                 visible={sidebarVisible}
             />
 
-            <Styles.Content>
+            <Styles.Content $sidebarVisible={sidebarVisible}>
                 <Header toggleSidebar={toggleSidebar} />
 
                 {children}
