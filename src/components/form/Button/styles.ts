@@ -12,4 +12,8 @@ export const Container = styled.button`
         opacity: 0.75;
         cursor: not-allowed;
     }
+
+    &:active {
+        opacity: 0.75;
+    }
 `;
