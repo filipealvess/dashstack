@@ -4,6 +4,9 @@ import { BarChart2, Clock, Package, Users } from "react-feather";
 import * as Styles from "@/app/dashboard/(dashboard)/styles";
 import SummaryCard from "@/components/cards/Summary";
 import SalesChart from "@/components/charts/Sales";
+import { Spacer } from "@/components/styled/Spacer";
+import DealsTable from "@/components/tables/Deals";
+import Section from "@/components/wrappers/Section";
 
 function Index() {
     return (
@@ -51,6 +54,12 @@ function Index() {
             </Styles.Summary>
 
             <SalesChart />
+
+            <Spacer $height={24} />
+
+            <Section title="Deals Details">
+                <DealsTable />
+            </Section>
         </Styles.Container>
     );
 }
