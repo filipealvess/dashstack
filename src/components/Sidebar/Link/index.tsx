@@ -3,18 +3,16 @@ import * as Styles from "@/components/Sidebar/Link/styles";
 
 import type { IProps } from "@/components/Sidebar/Link/index.d";
 
-function Link({ route, children, onClick }: IProps) {
+function Link({ route, children, onClick, paths }: IProps) {
     const path = usePathname();
+
+    const isActive = paths?.includes(path) ?? path === route;
 
     return (
         <Styles.Container>
-            {path === route && <Styles.Badge />}
+            {isActive === true && <Styles.Badge />}
 
-            <Styles.Link
-                onClick={onClick}
-                $active={path === route}
-                href={route}
-            >
+            <Styles.Link onClick={onClick} $active={isActive} href={route}>
                 {children}
             </Styles.Link>
         </Styles.Container>
